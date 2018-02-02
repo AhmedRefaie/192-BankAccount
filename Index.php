@@ -71,7 +71,45 @@ echo $ref->DisplayBalance() ;
 
 
 
+full use kinda off :p
 
+<?php
+class BankAccount {
+	public $balance = 0;
+	
+	public function DisplayBalance(){
+		return 'Balance: '.$this->balance;
+	}
+	
+	public function Withdraw($amount){
+		if (($this->balance)<$amount){
+			echo 'Not enough money.'.'<br>';
+		} else {
+		$this->balance = $this->balance - $amount;
+		}
+	}
+	
+	public function Deposite($amount){
+		$this->balance = $this-> balance + $amount;
+	}
+	
+}
+
+$ref = new BankAccount ;
+$okka = new BankAccount ;
+
+$refa3y = 'Refaie';
+
+$ref->Deposite(1000);
+$ref->Withdraw(100000);
+echo $ref->DisplayBalance().'<br>' ;
+
+$okka->Deposite(1000000000);
+$okka->Withdraw(200);
+echo $okka->DisplayBalance() ;
+
+
+?>  
 
 
 
