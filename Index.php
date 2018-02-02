@@ -47,3 +47,72 @@ echo $ref->DisplayBalance() ;
 ?>  
 
 
+private
+
+<?php
+
+class BankAccount {
+
+	private $balance = 3500;
+	
+	private function DisplayBalance(){
+		return 'Balance: '.$this->balance;
+	}
+}
+
+
+$ref = new BankAccount ;
+echo $ref->DisplayBalance() ;
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
